@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+
+    <!-- Defyning the set of characters used-->
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- W3.CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Adicionar Estratégia</title>
+
+   <!-- Adicionando meu proprio js -->
+   <script type="text/javascript" src="script.js"></script>
+
+</head>
+<body>
+ 
+    <form class="w3-container w3-card-4">
+
+        <label>Nome da Estratégia</label>
+        <input class="w3-input w3-border-0" id = "nomeEstrategia" type="text">
+
+
+        <label>Valor</label>
+        <input class="w3-input center" id = "valorEstrategia" type="number" min = "0" max  = "9">
+
+      <select class="w3-select" name="option" id = "tipoEstrategia">
+        <option value="" disabled selected>Tipo de Estratégia</option>
+        <option value="IdPreEstrategia">Pré Estratégia</option>
+        <option value="IdEstrategiaInicial">Estratégia Inicial</option>
+        <option value="IdEstrategiaPadrao">Estratégia Padrão</option>
+      </select>
+
+
+      <p><button class="w3-btn w3-teal" id = "IdBotaoEnviar">Adicionar</button></p>
+    </form>
+
+  </div>
+
+
+  <script>
+  
+      document.getElementById('IdBotaoEnviar').addEventListener('click', submitEstrategia);
+      
+      function submitEstrategia(e){
+        countData();
+        let contador_estrategias = count+1;
+        let char_contador_estrategias = contador_estrategias.toString();
+        e.preventDefault();
+        const nomeEstrategia = document.getElementById('nomeEstrategia').value;
+        const valorEstrategia = document.getElementById('valorEstrategia').value;
+        const tipoEstrategia = document.getElementById('tipoEstrategia').value;
+        dataBase.set('estrategia.' + char_contador_estrategias +'.nome',nomeEstrategia);
+        dataBase.set('estrategia.' + char_contador_estrategias +'.valor',valorEstrategia);
+        dataBase.set('estrategia.' + char_contador_estrategias +'.tipo',tipoEstrategia);
+
+        let mensagem = [];
+        mensagem[0] = nomeEstrategia;
+        mensagem[1] = valorEstrategia;
+        mensagem[2] = tipoEstrategia;
+
+        ipcRenderer.send('item:add', mensagem);
+      }
+    </script>
+
+
+</body>
+</html>

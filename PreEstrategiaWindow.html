@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        
+
+    <!-- Defyning the set of characters used-->
+    <meta charset="utf-8"> 
+
+    <title>Hachiko - Análise Estratégias</title>
+
+</head>
+<body>
+    <!--Criando um Menu de abas Superior-->
+    <nav class = "blue darken-3">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Hachiko</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="mainWindow.html">Acionamento</a></li>
+            <li><a href="PreEstrategiaWindow.html">Análise de Estratégia</a></li>
+            <li> <a  id = "IdBotaoFechar" style:'-webkit-app-region: no-drag;' class="btn-floating btn-large waves-effect waves-light blue accent-2"><i class="material-icons">cancel</i></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- TíTulo -->
+      <nav>
+            <div class="nav-wrapper cyan darken-3">
+              <a class="brand-logo center">Pré Estratégias</a>
+            
+            </div>
+          </nav>
+          
+          <!-- A barra de paginação da janela-->
+          <div class="w3-bar">
+              <a href="PreEstrategiaWindow.html" class="w3-button">Pré Estratégia</a>
+              <a href="EstrategiaInicialWindow.html" class="w3-button">Estratégia Inicial</a>
+              <a href="EstrategiaPadraoWindow.html" class="w3-button">Estratégia Padrão</a>
+            </div>
+            
+          <div class="w3-row-padding cyan darken-3">
+          
+            <!--Cards-->
+          <div class="w3-third w3-section">
+          <div class="w3-card-4">
+          <img src="sumo1.gif" style="width:100%">
+          <div class="w3-container w3-white">
+          <h4>Null</h4>
+          <p>Recomendada para uso principalmente em testes. Porém se durante o torneio seu robô sempre for
+              para o mesmo lugar, talvez seja interessante não mover ele no início.
+          </p>
+          </div>
+          </div>
+          </div>
+          
+          <div class="w3-third w3-section">
+          <div class="w3-card-4">
+          <img src="sumo1.gif" style="width:100%">
+          <div class="w3-container w3-white">
+          <h4>Giro</h4>
+          <p>Estratégia poderosa para enganar adversários, tem a intenção de rapidamente forçar o robô
+              a ir para um lado da linha. É interessante usar no sentido oposto que o robô oponente esteja a fim de evitar um contato imediato </p>
+          </div>
+          </div>
+          </div>
+          
+          <div class="w3-third w3-section">
+          <div class="w3-card-4">
+          <img src="sumo1.gif" style="width:100%">
+          <div class="w3-container w3-white">
+          <h4>Trás Reto</h4>
+          <p>Ao posicionar o robô bem no meio da arena em uma posição desaforável, essa estratégia pode ser usada para 
+              usada com o intuito de forçar o adversário a executar uma estratégia que tente se aproveitar da sua posição, enquanto que na realidade o seu robô estara seguro bem atrás.
+          </p>
+          </div>
+          </div>
+          </div>
+
+          
+            <!-- Adicionando meu proprio js -->
+     <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

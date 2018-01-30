@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <nav class = "teal lighten-2">
+        <div class="navwrapper"></div>
+        <a  class="brand-logo left ">Hachiko</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a>Estudo De Estratégias</a></li>
+        <li><a >Estatísticas</a></li>
+        <li><a >Adicionar Estratégia</a></li>
+    </nav>
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>    
+<body>
+    <div>
+        <h2> Pré Estatégia </h2>
+    </div>
+<select id = "IdPreEstrategia" class = "ComboBox" name="Pré Estratégia">
+  <option value="0">Null</option>
+  <option value="1">Giro Direita</option>
+  <option value="2">Giro Esquerda</option>
+  <option value="3">Trás Reto</option>
+</select>
+    
+    <div class = "Divinicial">
+        <h2> Estratégia Inicial </h2>
+    </div>
+<select id = "IdEstrategiaInicial" class = "ComboBox_2" name="Estratégia Inicial">
+  <option value="0">Agressiva</option>
+  <option value="1">Arco</option>
+  <option value="2">Twister</option>
+  <option value="3">Pulso</option>
+</select>
+    
+      <div class = "Divpadrao">
+        <h2> Estratégia Padrão </h2>
+    </div>
+    
+    <select id = "IdEstrategiaPadrao" class = "ComboBox_3" name="Estratégia Padrão">
+  <option value="0">Agressiva</option>
+  <option value="1">Arco</option>
+  <option value="2">Twister</option>
+  <option value="3">Pulso</option>
+</select>
+    
+    <div class = "DivVelBusca">
+        <h2> Velocidade de Busca </h2>
+    </div>
+    
+    <textarea rows="1" cols="45"  class = "TextInput" id="IdInputVelBusca">0
+</textarea>
+
+    <div class = "DivVelAtq">
+        <h2> Velocidade de Ataque </h2>
+    </div>
+    
+     <textarea rows="1" cols="45"  class = "TextInput_2" id = "IdInputVelAtq">0
+</textarea>
+    
+    <div class = "DivGiro">
+        <h2> Ângulo Giro Inicial </h2>
+    </div>
+     <textarea rows="1" cols="45"  class = "TextInput_3" id="IdInputGiro">0
+    </textarea>
+    <div class = "DivTempo">
+        <h2> Tempo Inicial </h2>
+    </div>
+    
+    <textarea id = "IdTempoInicial" rows="1" cols="45"  class = "TextInput_3" id = "IdInputTempo">0
+    </textarea>
+    
+      <div class = "DivDebug">
+        <h2 id = "IdDebugging"> Debugging </h2>
+    </div>
+    
+    <form class = "Radio">
+    <input id = "IdDebuggingDesativado" type="radio" name="Debugging" value="Desativado" checked> Desativado<br class="Radio">
+  <input id = "IdDebuggingAtivado" type="radio" name="Debugging" value="Ativado"> Ativado<br>
+        </form>
+    
+    <div class = "DivAcionar"> <button class = "ButtonAcionar" onclick="geraString()">ACIONAR</button> </div>
+    
+    </body>    
+    
+</html>

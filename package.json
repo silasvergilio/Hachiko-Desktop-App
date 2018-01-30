@@ -1,0 +1,15 @@
+{
+  "name": "hachiko",
+  "version": "1.0.0",
+  "description": "Desktop App to communicate with a sumo robot",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^1.7.11",
+    "electron-store": "^1.3.0"
+  }
+}

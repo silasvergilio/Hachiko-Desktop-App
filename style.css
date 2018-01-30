@@ -1,0 +1,183 @@
+
+/* estilo do primeiro título*/
+h1{
+
+}
+
+/*Estilo do div do primeiro título*/
+.Title{
+    background-color: cornflowerblue;
+    align-self: center;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    border-width: 10px;
+    border-color: orange;
+    width: 800px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.SubTitle{
+    font-family: sans-serif;
+    border: 3px;
+    border-color: black;
+    color: white;
+    background-color: cornflowerblue;
+    font-size: 15px;
+    width: 150px;
+    height: 50px;
+    border-style: solid;
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    left: 10px;
+}
+
+.Divinicial{
+    width: 185px;
+    left: 175px;
+    bottom: 125px;
+}
+
+.Divpadrao{
+    width: 200px;
+    left: 375px;
+    bottom: 250px;
+}
+
+.DivVelBusca{   
+    width: 300px;
+    left: 0px;
+    bottom: 230px;
+}
+
+.DivVelAtq{
+    width: 300px;
+    left: 380px;
+    bottom: 332px;
+}
+
+.DivGiro{
+    width: 300px;
+    left: 0px;
+    bottom: 332px;
+}
+
+.DivTempo{
+    width: 300px;
+    left: 0px;
+    bottom: 332px;
+}
+
+.DivDebug{
+    width: 300px;
+    left: 380px;
+    bottom: 535px;
+}
+
+.ComboBox{
+    height: 30px;
+    width: 155px;
+    color: white;
+    font-weight: 600;
+    background-color: gray;
+    font-family: sans-serif;
+    margin: 10px;
+    position: relative;
+    left: 10px;
+    }
+
+
+.ComboBox_2{
+    height: 30px;
+    width: 155px;
+    color: white;
+    font-weight: 600;
+    background-color: gray;
+    font-family: sans-serif;
+    margin: 10px;
+    position: relative;
+    left: 195px;
+    bottom: 128px;
+    }
+
+
+.ComboBox_3{
+    height: 30px;
+    width: 155px;
+    color: white;
+    font-weight: 600;
+    background-color: gray;
+    font-family: sans-serif;
+    margin: 10px;
+    position: relative;
+    left: 390px;
+    bottom: 254px;
+    }
+
+
+.TextInput{
+    position: relative;
+    bottom: 230px;
+    resize: none;
+    font-size-adjust: none;
+}
+
+.TextInput_2{
+    position: relative;
+    bottom: 330px;
+    left: 370px;
+    resize: none;
+    font-size-adjust: none;
+}
+
+.TextInput_3{
+    position: relative;
+    bottom: 330px;
+    left: 0px;
+    resize: none;
+    font-size-adjust: none;
+}
+
+.Radio
+{
+    font-family: sans-serif;
+    color: blue;
+    font-weight: 700;
+    position: relative;
+    left: 450px;
+    bottom: 540px;
+}
+
+.DivAcionar{
+    font-size: 10px;
+    font-family: sans-serif;
+    font-weight: 900; 
+    text-transform: uppercase
+    border: 4px;
+    border-color: cornflowerblue;
+    color: blue;
+    background-color: white;
+    font-size: 15px;
+    width: 150px;
+    height: 50px;
+    border-style: solid;
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    left: 400px;
+    bottom: 530px;
+    align-content: center;
+}
+
+.ButtonAcionar{
+     width: 150px;
+    height: 50px;
+    background-color: cornflowerblue;
+}
+
+.Acionar:hover
+{
+    background-color: darkgray;
+}

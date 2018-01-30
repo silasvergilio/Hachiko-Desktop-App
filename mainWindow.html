@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Installing Hammer -->
+    <script src="./hammer.min.js" onload="window.Hammer = module.exports;"></script>
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!-- Defyning the set of characters used-->
+    <meta charset="utf-8"> 
+
+    
+    
+    <title>Hachiko - Acionamento</title>
+
+</head>
+<body>
+
+    <!--Criando um Menu de abas Superior-->
+    <nav class = "blue darken-3">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">Hachiko</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="mainWindow.html">Acionamento</a></li>
+                <li><a href="PreEstrategiaWindow.html">Análise de Estratégia</a></li>
+                <li>  <a  id = "IdBotaoAdicionarEstrategia" title = "Adicionar Estratégia" class="btn-floating btn-large waves-effect waves-light blue accent-2"><i class="material-icons">add_circle</i></a></li>
+                <li>  <a  id = "IdBotaoFechar" style:'-webkit-app-region: no-drag;' class="btn-floating btn-large waves-effect waves-light blue accent-2"><i class="material-icons">cancel</i></a></li>
+              </ul>
+            </div>
+          </nav>
+
+
+        <!--Criando Layout de Tabela para apresentar as informações-->
+        <!--Primeira Linha-->
+        <div class="w3-row">
+                <div class="w3-col  s4 w3-teal w3-center"><h5>Pré Estratégia</h5></div>
+                <div class="w3-col  s4 w3-teal w3-center"><h5>Estratégia Inicial</h5></div>
+                <div class="w3-col  s4 w3-teal w3-center"><h5>Estratégia Padrão</h5></div>
+        </div>
+
+         <!--Linha Botões de Seleção de Estratégia-->
+         <div class="w3-row">
+                <div class="w3-col s4 w3-teal w3-center"> 
+                    <!-- Botões para seleção de estratégia-->
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button w3-block w3-teal" id = "IdPreEstrategia" value = '0'>Selecione a Estratégia</button>
+                        <div id = "DivPreEstrategia" class="w3-dropdown-content w3-bar-block w3-border">
+                            <a onclick="Check_Strat(0)" class="w3-bar-item w3-button">Null</a>
+                            <a onclick="Check_Strat(1)" class="w3-bar-item w3-button">Giro</a>
+                            <a onclick="Check_Strat(2)" class="w3-bar-item w3-button">Trás Reto</a>
+                        </div>
+                    </div>   
+                </div>
+                <div class="w3-col s4 w3-teal w3-center">
+                        <div class="w3-dropdown-hover" >
+                                <button class="w3-button w3-block w3-teal" id = "IdEstrategiaInicial" value = "0">Selecione a Estratégia</button>
+                                <div class="w3-dropdown-content w3-bar-block w3-border" id = "DivEstrategiaInicial">
+                                    <a onclick="Check_Strat(3)" class="w3-bar-item w3-button">Busca Agressiva</a>
+                                    <a onclick="Check_Strat(4)" class="w3-bar-item w3-button">Arco</a>
+                                    <a onclick="Check_Strat(5)" class="w3-bar-item w3-button">Twister</a>
+                                    <a onclick="Check_Strat(6)" class="w3-bar-item w3-button">Pulso</a>
+                                </div>
+                        </div>
+                </div>
+                <div class="w3-col s4 w3-teal w3-center">
+                        <div class="w3-dropdown-hover">
+                                <button class="w3-button w3-block w3-teal" id = "IdEstrategiaPadrao" value = "0">Selecione a Estratégia</button>
+                                <div class="w3-dropdown-content w3-bar-block w3-border" id = "DivEstrategiaPadrao">
+                                    <a onclick="Check_Strat(7)" class="w3-bar-item w3-button">Busca Agressiva</a>
+                                    <a onclick="Check_Strat(8)" class="w3-bar-item w3-button">Twister</a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <!--Linha Imagens das Estratégias-->
+        <div class="w3-row">
+                <div class="w3-col s4 w3-white w3-center"><img style='height: 50%; width: 50%; object-fit: contain' src="sumo1.gif"  alt="SumoRobot" height="100%" width="100%"></div>
+                <div class="w3-col s4 w3-white w3-center"><img style='height: 50%; width: 50%; object-fit: contain' src="sumo1.gif"  alt="SumoRobot" height="100%" width="100%"></div>
+                <div class="w3-col s4 w3-white w3-center"><img style='height: 50%; width: 50%; object-fit: contain' src="sumo1.gif"  alt="SumoRobot" height="100%" width="100%"></div>
+        </div>
+
+       
+        <!-- Títulos de Input de Velocidade-->
+        <div class="w3-row">
+                <div class="w3-col s4 w3-teal w3-center"><h5>Velocidade de Ataque</h5></div>
+                <div class="w3-col s4 w3-teal w3-center"><h5>Velocidade de Busca</h5></div>
+                <div class="w3-col s4 w3-teal w3-center"><h5 id = "IdTitleGiro">Ângulo de Giro Inicial</h5></div>
+        </div>
+        <!-- Input de valors numéricos -->
+        <div class="w3-row">
+                <div class="w3-col s4  w3-center "><input id = "IdInputVelAtq" class="w3-input center" type="number" min = "0" max = "99"></div>
+                <div class="w3-col s4  w3-center "><input id = "IdInputVelBusca" class="w3-input center" type="number" min = "0" max = "99"></div>
+                <div class="w3-col s4  w3-center "><input id = "IdInputGiro" class="w3-input center" type="number" min = "0" max = "100"></div>
+        </div>
+        <!-- Titulos para seleção de Detalhes do Acionamento -->
+        <div class="w3-row">
+                <div class="w3-col s4 w3-teal w3-center"><h5>Debugging</h5></div>
+                <div class="w3-col s4 w3-teal w3-center"><h5>Tempo Inicial</h5></div>
+                <div class="w3-col s4 w3-teal w3-center"><h5>Ângulo Giro Linha</h5></div>
+        </div>
+
+        <div class="w3-row">
+                <div class="w3-col s4 w3-teal w3-center"> 
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button w3-block w3-teal" id = "IdDebugging" value = '0'>Escolha uma Opção</button>
+                        <div class="w3-dropdown-content w3-bar-block ">
+                            <a id = "IdDebugging" onclick="Check_Debugging(0)" class="w3-bar-item w3-button">Sim</a>
+                            <a id = "IdDebugging" onclick="Check_Debugging(1)" class="w3-bar-item w3-button">Não</a>
+                        </div>
+                    </div>   
+                </div>
+
+                <div class="w3-col s4 w3-center "><input id = "IdTempoInicial" class="w3-input center" type="number" min = "0" ></div>
+        
+                <div class="w3-col s4 w3-center "><input id = "IdInputGiroLinha" class="w3-input center" type="number" min = "0" max = "100"></div>
+        </div>  
+
+        <!-- Botão Enviar -->
+
+        <div class = "center">
+            <button onclick="countData()" id= 'IdBotaoEnviar' style:'-webkit-app-region: no-drag;' class="btn waves-effect waves-light" type="submit" name="action">Enviar Estratégia
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+
+
+         <!-- Botão Deletar -->
+
+         <div class = "center">
+            <button onclick="deleteData()" id= 'IdBotaoEnviar' style:'-webkit-app-region: no-drag;' class="btn waves-effect waves-light" type="submit" name="action">Deletar Data
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+
+
+     <!-- Adicionando meu proprio js -->
+     <script type="text/javascript" src="script.js"></script>
+
+     <script> countData(); inicializaEstrategias();  </script>
+
+    
+</body>
+</html>
